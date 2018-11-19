@@ -10,3 +10,10 @@ Directory description
 
 ### Note
 V10 is added to the master branch without extensive tests. Feel free to report or fix bugs.
+
+
+
+This is a Project forked from [megakilo](https://github.com/megakilo/FreeRTOS-Sim), he had archived his repo, and I can't push a merge to him about supporing macOS Mojave and cmake support.
+
+so I start a new clean [repo](https://github.com/shlinym/FreeRTOS-POSIX) supporting Mojave and cmake, if you have any questions, you can start a issue on it.
+
