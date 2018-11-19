@@ -88,16 +88,17 @@ CWARNS += -Wunused-parameter
 CWARNS += -Wunused-value
 CWARNS += -Wunused-variable
 CWARNS += -Wmissing-prototypes
-CWARNS += -Wno-int-to-void-pointer-cast
 
 #CWARNS += -Wno-unused-function
 
-#CFLAGS += -m32
 CFLAGS += -DDEBUG=1
 #CFLAGS += -g -DUSE_STDIO=1 -D__GCC_POSIX__=1
 CFLAGS += -g -UUSE_STDIO -D__GCC_POSIX__=1
 ifneq ($(shell uname), Darwin)
 CFLAGS += -pthread
+CFLAGS += -m32
+else
+CWARNS += -Wno-int-to-void-pointer-cast
 endif
 
 # MAX_NUMBER_OF_TASKS = max pthreads used in the POSIX port. 
